@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Développement web - La Rochelle Université</title>
+  <meta name="description" content="Organisation du cours de développement web : 10 TP de HTML, CSS, JavaScript et WordPress.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <div class="enveloppe">
+      <a href="#haut" class="logo"><img src="assets/logo-la-rochelle-universite.png" width="96" height="96" alt="La Rochelle Université"></a>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#proposition">Proposition</a></li>
+          <li><a href="#progression">Progression</a></li>
+          <li><a href="#html-css">Séances</a></li>
+          <li><a href="#atelier-ia">Atelier IA</a></li>
+          <li><a href="#evaluations">Évaluations</a></li>
+          <li><a href="#diffusion">Ressources</a></li>
+          <li><a href="#pratique">Infos pratiques</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <p class="bandeau" role="note">Version de travail, en cours de rédaction : proposition de TP soumise à relecture. Les corrections ne figurent pas sur ce site.</p>
+  <main id="contenu">
+    <section class="ouverture" id="haut">
+      <p class="surtitre">Cours et travaux pratiques</p>
+      <h1>Développement web</h1>
+      <p class="chapeau">De la première page HTML à l’administration d’un site WordPress, autour d’un projet fil rouge : Ocean Fest, un festival fictif à La Rochelle.</p>
+      <dl class="chiffres">
+        <div><dt>Séances</dt><dd>10</dd></div>
+        <div><dt>Heures</dt><dd>15</dd></div>
+        <div><dt>Évaluations</dt><dd>2</dd></div>
+      </dl>
+    </section>
+
+    <section id="proposition">
+      <h2>Proposition pédagogique</h2>
+      <div class="deux">
+        <div>
+          <h3>Cadre</h3>
+          <ul>
+            <li><strong>Public :</strong> débutants découvrant le développement web.</li>
+            <li><strong>Volume :</strong> 10 séances de 1h30, soit 15 h, dont deux évaluations (TP 5 et TP 10).</li>
+            <li><strong>Fil rouge :</strong> Ocean Fest, un festival fictif à La Rochelle. Le TP 5 porte sur un autre sujet, pour évaluer sans que la correction donne la réponse.</li>
+            <li><strong>Matériel :</strong> navigateur récent, VS Code, une instance WordPress par personne.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Déroulé type d’une séance</h3>
+          <ol>
+            <li>15 min de démonstration</li>
+            <li>20 min d’exercice guidé</li>
+            <li>45 min de travail autonome</li>
+            <li>10 min de bilan</li>
+          </ol>
+          <p>Chaque séance repart du rendu précédent ou de sa correction, diffusée après la remise.</p>
+        </div>
+      </div>
+      <h3>Compétences visées</h3>
+      <ul><li><strong>À chaque séance :</strong> le sujet PDF du TP.</li><li><strong>TP8, TP9 et TP10 :</strong> en plus, la fiche de réalisation WordPress.</li><li><strong>TP10, le jour de l’épreuve :</strong> en plus, <code>TP10_Fichiers_depart.zip</code>.</li><li><strong>Après la remise uniquement :</strong> le ZIP de correction du TP. Ne pas diffuser les corrections du TP5 et du TP10 avant la fin de toutes les sessions d’épreuve.</li><li><strong>Jamais :</strong> le dossier <code>_source/</code>, ce déroulé et le guide WordPress restent côté enseignant.</li></ul>
+      <h3>Répartition des séances</h3>
+      <div class="defilement"><table><thead><tr><th scope="col">TP</th><th scope="col">Séance</th><th scope="col">Notions principales</th></tr></thead><tbody><tr><th scope="row"><a href="#tp01">1</a></th><td>Comprendre le Web et créer une page HTML</td><td>HTTP(S), URL, client/serveur, balises, img, a, alt</td></tr><tr><th scope="row"><a href="#tp02">2</a></th><td>Structurer un site multipage en HTML</td><td>Sémantique, liens relatifs, formulaire, GET/POST</td></tr><tr><th scope="row"><a href="#tp03">3</a></th><td>Mettre en forme un site avec CSS</td><td>Sélecteurs, héritage, spécificité, modèle de boîte</td></tr><tr><th scope="row"><a href="#tp04">4</a></th><td>Créer une interface responsive</td><td>Flexbox, Grid, rem, %, max-width, @media, focus</td></tr><tr><th scope="row"><a href="#tp05">5</a></th><td>ÉVALUATION 1 - HTML et CSS</td><td>Sémantique, CSS externe, responsive, accessibilité</td></tr><tr><th scope="row"><a href="#tp06">6</a></th><td>Découvrir JavaScript et les événements</td><td>defer, const/let, conditions, fonctions, addEventListener</td></tr><tr><th scope="row"><a href="#tp07">7</a></th><td>Manipuler le DOM et valider un formulaire</td><td>querySelector, createElement, preventDefault, trim</td></tr><tr><th scope="row"><a href="#tp08">8</a></th><td>Découvrir WordPress et publier du contenu</td><td>CMS, PHP, base de données, pages, articles, permaliens</td></tr><tr><th scope="row"><a href="#tp09">9</a></th><td>Personnaliser et administrer WordPress</td><td>Thèmes de blocs, extensions, rôles, maintenance, SEO</td></tr><tr><th scope="row"><a href="#tp10">10</a></th><td>ÉVALUATION 2 - JavaScript et WordPress</td><td>DOM, événements, pages, catégories, menu, preuves</td></tr></tbody></table></div>
+    </section>
+
+    <section id="progression">
+      <h2>Progression</h2>
+      <ol class="frise">
+        <li class="html-css"><a href="#tp01" title="Comprendre le Web et créer une page HTML">1</a></li>
+        <li class="html-css"><a href="#tp02" title="Structurer un site multipage en HTML">2</a></li>
+        <li class="html-css"><a href="#tp03" title="Mettre en forme un site avec CSS">3</a></li>
+        <li class="html-css"><a href="#tp04" title="Créer une interface responsive">4</a></li>
+        <li class="html-css evaluation"><a href="#tp05" title="HTML et CSS">5</a></li>
+        <li class="javascript"><a href="#tp06" title="Découvrir JavaScript et les événements">6</a></li>
+        <li class="javascript"><a href="#tp07" title="Manipuler le DOM et valider un formulaire">7</a></li>
+        <li class="wordpress"><a href="#tp08" title="Découvrir WordPress et publier du contenu">8</a></li>
+        <li class="wordpress"><a href="#tp09" title="Personnaliser et administrer WordPress">9</a></li>
+        <li class="wordpress evaluation"><a href="#tp10" title="JavaScript et WordPress">10</a></li>
+      </ol>
+      <ul class="legende">
+        <li><span class="pastille html-css"></span>HTML et CSS</li>
+        <li><span class="pastille javascript"></span>JavaScript</li>
+        <li><span class="pastille wordpress"></span>WordPress</li>
+        <li><span class="pastille evaluation"></span>Évaluation</li>
+      </ul>
+    </section>
+
+    <section class="module" id="html-css">
+      <h2>HTML et CSS</h2>
+      <p class="resume">Structurer une page, la mettre en forme et la rendre responsive.</p>
+      <div class="grille large">
+      <article class="carte" id="tp01">
+        <p class="surtitre">TP 1 · 1h30 · Ocean Fest</p>
+        <h3>Comprendre le Web et créer une page HTML</h3>
+        <p class="objectif">Expliquer le rôle du navigateur, du serveur, de HTML, CSS et JavaScript.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP01_Sujet.pdf">Sujet (PDF)</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Expliquer le rôle du navigateur, du serveur, de HTML, CSS et JavaScript.</li><li>Construire un document HTML5 valide avec titres, paragraphes, images et liens.</li><li>Utiliser un éditeur et les outils de développement du navigateur.</li></ul><h4>Notions</h4><p>HTTP(S), URL, client/serveur, élément, balise, attribut, doctype, head/body, h1/h2, img, a, alt.</p><h4>À préparer</h4><p>Ordinateur, éditeur de texte (VS Code conseillé), navigateur et dossier de travail.</p><h4>Travail demandé</h4><ol><li>Créer le dossier <code>oceanfest/</code> avec <code>index.html</code> et un sous-dossier <code>images/</code>.</li><li>Écrire le squelette HTML5 : <code>lang=&quot;fr&quot;</code>, charset UTF-8, balise viewport et titre explicite.</li><li>Ajouter un <code>h1</code> « Ocean Fest », deux <code>h2</code>, une présentation et un programme de trois activités.</li><li>Ajouter un lien vers un site extérieur et une image avec un texte alternatif pertinent.</li><li>Ouvrir le fichier dans le navigateur, puis inspecter le titre, la console et les éléments avec F12.</li><li>Dans <code>reponses.txt</code>, expliquer en quelques lignes le rôle du navigateur, du serveur, de HTML, CSS et JavaScript, puis la différence entre HTTP et HTTPS.</li></ol><h4>Contraintes</h4><p>Pas de framework ni de générateur de site. La page doit s’ouvrir en local.</p><h4>Critères d’évaluation</h4><p>Page lisible, <code>h1</code> unique, titres structurés, image avec <code>alt</code>, lien utilisable, réponses justes.</p><h4>À rendre</h4><p>Le dossier <code>oceanfest/</code> compressé : <code>index.html</code>, <code>images/</code> et <code>reponses.txt</code>.</p><h4>Pour aller plus loin</h4><p>Ajouter un élément HTML absent du sujet (<code>figure</code>, <code>time</code>, etc.) et justifier ce choix en deux phrases.</p>
+        </details>
+      </article>
+      <article class="carte" id="tp02">
+        <p class="surtitre">TP 2 · 1h30 · Ocean Fest</p>
+        <h3>Structurer un site multipage en HTML</h3>
+        <p class="objectif">Employer des balises sémantiques et une navigation relative.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP02_Sujet.pdf">Sujet (PDF)</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Employer des balises sémantiques et une navigation relative.</li><li>Organiser trois fichiers HTML et leurs ressources.</li><li>Construire un formulaire accessible sans traitement serveur.</li></ul><h4>Notions</h4><p>header, nav, main, section, article, footer, ul/li, label, input, textarea, méthodes GET/POST (notions), liens relatifs.</p><h4>À préparer</h4><p>Votre rendu du TP1 ou la correction du TP1 ; navigateur et éditeur.</p><h4>Travail demandé</h4><ol><li>Réutiliser le dossier du TP1, en conservant l’image. Créer <code>apropos.html</code> et <code>contact.html</code>.</li><li>Ajouter dans chaque page <code>header</code>, <code>nav</code>, <code>main</code> et <code>footer</code>.</li><li>Créer un menu en liste avec des liens relatifs vers les trois pages. Indiquer le lien actif avec <code>aria-current=&quot;page&quot;</code> et un texte en gras (<code>strong</code>).</li><li>Sur l’accueil : une liste <code>ul</code> des événements, un tableau de deux horaires et trois cartes <code>&lt;article class=&quot;card&quot;&gt;</code> (titre et phrase) dans un <code>&lt;div class=&quot;cards&quot;&gt;</code>.</li><li>Sur <code>contact.html</code> : un formulaire avec nom, email, sujet, message et bouton. Relier chaque <code>label</code> à son champ et donner un <code>name</code> à chaque champ.</li><li>Tester le bouton : les champs obligatoires vides sont signalés. Une fois remplis, observer les valeurs dans l’URL (GET).</li></ol><h4>Contraintes</h4><p>Le formulaire n’envoie rien : utiliser <code>action=&quot;#&quot;</code>, <code>method=&quot;get&quot;</code> et l’indiquer clairement sur la page.</p><h4>Critères d’évaluation</h4><p>Trois pages reliées, lien actif indiqué, HTML sémantique, formulaire avec labels, organisation claire.</p><h4>À rendre</h4><p>Le dossier du site compressé : les trois pages HTML et <code>images/</code>.</p><h4>Pour aller plus loin</h4><p>Expliquer en deux phrases pourquoi un vrai formulaire de contact utiliserait POST plutôt que GET.</p>
+        </details>
+      </article>
+      <article class="carte" id="tp03">
+        <p class="surtitre">TP 3 · 1h30 · Ocean Fest</p>
+        <h3>Mettre en forme un site avec CSS</h3>
+        <p class="objectif">Relier une feuille de style externe aux pages.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP03_Sujet.pdf">Sujet (PDF)</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Relier une feuille de style externe aux pages.</li><li>Employer sélecteurs, couleurs, polices et modèle de boîte.</li><li>Comprendre la spécificité et la cascade.</li></ul><h4>Notions</h4><p>link rel=stylesheet, sélecteurs élément/classe/id, héritage, spécificité, margin, padding, border, box-sizing.</p><h4>À préparer</h4><p>Votre rendu du TP2 ou la correction du TP2.</p><h4>Travail demandé</h4><ol><li>Ajouter <code>styles.css</code> et le relier aux trois pages.</li><li>Définir une palette et une typographie globale sur <code>body</code>, avec <code>box-sizing: border-box</code>.</li><li>Styliser l’en-tête, le menu, les liens, les titres, les cartes et le pied de page.</li><li>Utiliser <code>margin</code>, <code>padding</code> et <code>border</code> sur une carte, et commenter le rôle de chacun dans le CSS.</li><li>Ajouter l’attribut <code>id=&quot;carte-phare&quot;</code> à une carte. Écrire deux règles concurrentes, une avec la classe et une avec l’id, puis expliquer dans un commentaire laquelle s’applique et pourquoi.</li></ol><h4>Contraintes</h4><p>Ne modifier ni les textes ni la structure HTML ; seul l’<code>id</code> de l’étape 5 s’ajoute. Pas de Flexbox, de Grid ni de media query : ils sont au programme du TP4.</p><h4>Critères d’évaluation</h4><p>Feuille CSS externe, styles cohérents, modèle de boîte maîtrisé, conflit de sélecteurs expliqué, aucun style inline.</p><h4>À rendre</h4><p>Le dossier du site compressé, avec <code>styles.css</code>.</p><h4>Pour aller plus loin</h4><p>Ajouter un état <code>:hover</code> sur les cartes et expliquer son effet en deux phrases.</p>
+        </details>
+      </article>
+      <article class="carte" id="tp04">
+        <p class="surtitre">TP 4 · 1h30 · Ocean Fest</p>
+        <h3>Créer une interface responsive</h3>
+        <p class="objectif">Disposer des cartes avec CSS Grid et une navigation avec Flexbox.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP04_Sujet.pdf">Sujet (PDF)</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Disposer des cartes avec CSS Grid et une navigation avec Flexbox.</li><li>Mettre en œuvre des media queries pour mobile.</li><li>Vérifier lisibilité, navigation au clavier et responsive.</li></ul><h4>Notions</h4><p>Flexbox, Grid, viewport, rem, %, max-width, @media, focus visible, responsive design.</p><h4>À préparer</h4><p>Votre rendu du TP3 ou la correction du TP3 ; simulateur mobile du navigateur (F12).</p><h4>Travail demandé</h4><ol><li>Disposer les 3 cartes événements sur trois colonnes avec CSS Grid.</li><li>Réaliser une barre de navigation en Flexbox et une zone centrale limitée par <code>max-width</code>.</li><li>Convertir les tailles de la feuille en <code>rem</code>.</li><li>Écrire une media query à 700 px pour passer à une colonne et adapter la navigation.</li><li>Tester à 375 px et 1280 px, sans défilement horizontal.</li><li>Améliorer : état de focus visible, taille des liens, contraste. Vérifier la présence de la balise viewport et expliquer son rôle dans un commentaire.</li></ol><h4>Contraintes</h4><p>Rester compatible avec Firefox et Chrome récents, sans bibliothèque CSS.</p><h4>Critères d’évaluation</h4><p>Trois cartes en ligne sur grand écran et empilées sur mobile, aucun débordement, focus visible partout.</p><h4>À rendre</h4><p>Le dossier du site compressé, avec <code>styles.css</code> mis à jour.</p><h4>Pour aller plus loin</h4><p>Ajouter une deuxième étape à 2 colonnes pour les tablettes et la justifier en deux phrases. Vérifier le rendu au clavier.</p>
+        </details>
+      </article>
+      <article class="carte evaluation" id="tp05">
+        <p class="surtitre">TP 5 · 1h30 · Forum des métiers du numérique<span class="badge">Évaluation</span></p>
+        <h3>HTML et CSS</h3>
+        <p class="objectif">Mobiliser HTML sémantique et CSS, sans aide générative ni correction.</p>
+        <div class="liens">
+          <span class="attente">Sujet remis le jour de l’épreuve</span>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Épreuve individuelle : un nouveau site, indépendant du projet Ocean Fest.</p><h4>Objectifs</h4><ul><li>Mobiliser HTML sémantique et CSS, sans aide générative ni correction.</li><li>Produire une interface conforme à un cahier des charges écrit.</li><li>Déposer un rendu fonctionnel et organisé.</li></ul><h4>Notions</h4><p>HTML5, CSS externe, sémantique, responsive, fichiers cohérents et accessibles.</p><h4>À préparer</h4><p>Ce sujet, une machine et un éditeur configurés. Aucun fichier de départ. Vous rédigez les contenus.</p><h4>Déroulé de l’épreuve</h4><ol><li>0-10 min : lire le cahier des charges et organiser les fichiers.</li><li>10-70 min : construire la page.</li><li>70-85 min : tester la version mobile, réparer les liens et les erreurs.</li><li>85-90 min : déposer le dossier complet sous forme de ZIP.</li></ol><h4>Cahier des charges : « Forum des métiers du numérique »</h4><ul><li>Fichiers : <code>index.html</code> et <code>styles.css</code> uniquement, sans JavaScript.</li><li>Structure : en-tête avec navigation, section d’introduction, trois cartes métiers, bloc contact, pied de page.</li><li>Métiers : Développeur web, UX Designer, Administrateur de systèmes, avec un contenu original de deux phrases chacun.</li><li>Mise en page : en-tête centré ; introduction en bandeau coloré sur toute la largeur ; bloc contact visuellement distinct des cartes.</li><li>Palette et typographie : différentes de celles du site Ocean Fest.</li><li>Responsive : trois colonnes à partir de 700 px de large, une seule colonne sous 700 px, sans défilement horizontal.</li></ul><h4>Contraintes</h4><p>Épreuve individuelle. Ressources autorisées : documentation technique et notes personnelles. Corrigés des TP, collaboration et IA générative interdits. À adapter au règlement de l’établissement.</p><h4>Critères d’évaluation</h4><p>Barème sur 100 : HTML et sémantique 30 ; styles et maquette 30 ; responsive 20 ; qualité et accessibilité 20.</p><h4>À rendre</h4><p>Un ZIP contenant <code>index.html</code> et <code>styles.css</code>.</p>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="module" id="javascript">
+      <h2>JavaScript</h2>
+      <p class="resume">Réagir aux actions de l’utilisateur et modifier la page.</p>
+      <div class="grille large">
+      <article class="carte" id="tp06">
+        <p class="surtitre">TP 6 · 1h30 · Ocean Fest</p>
+        <h3>Découvrir JavaScript et les événements</h3>
+        <p class="objectif">Manipuler les variables, conditions, fonctions et événements.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP06_Sujet.pdf">Sujet (PDF)</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Manipuler les variables, conditions, fonctions et événements.</li><li>Brancher un fichier JavaScript externe et déboguer en console.</li><li>Déclencher un changement de thème et un message.</li></ul><h4>Notions</h4><p>script defer, console.log, const/let, chaînes, booléens, conditions, fonctions, addEventListener.</p><h4>À préparer</h4><p>Votre rendu du TP4 ou la correction du TP4 ; savoir ouvrir la console (F12).</p><h4>Travail demandé</h4><ol><li>Créer <code>script.js</code> et le charger avec <code>defer</code> sur la page d’accueil.</li><li>Afficher un message dans la console et déclarer un tableau de trois artistes.</li><li>Ajouter un bouton « Mode nuit ». Écrire une fonction qui alterne une classe sur <code>body</code>, à l’aide d’un booléen et d’une condition qui adapte le texte du bouton.</li><li>Ajouter une zone de message et un bouton « Voir le prochain artiste » : afficher successivement les trois noms, puis recommencer.</li><li>Introduire volontairement une faute dans un sélecteur du script (par exemple <code>#theme</code> devient <code>#themes</code>). Lire l’erreur dans la console, noter sa signification en commentaire, puis corriger.</li><li>Vérifier que les liens restent lisibles en mode nuit.</li></ol><h4>Contraintes</h4><p>Pas de bibliothèque JS. Les boutons sont de vrais <code>button</code> avec <code>type=&quot;button&quot;</code>, utilisables au clavier.</p><h4>Critères d’évaluation</h4><p>Thème opérationnel et lisible, cycle des artistes, fonctions, condition et écouteurs d’événements corrects.</p><h4>À rendre</h4><p>Le dossier du site compressé, avec <code>script.js</code>.</p><h4>Pour aller plus loin</h4><p>Ajouter une amélioration libre, la documenter en deux phrases et vérifier le rendu sur petit écran.</p>
+        </details>
+      </article>
+      <article class="carte" id="tp07">
+        <p class="surtitre">TP 7 · 1h30 · Ocean Fest</p>
+        <h3>Manipuler le DOM et valider un formulaire</h3>
+        <p class="objectif">Sélectionner et modifier des nœuds du DOM.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP07_Sujet.pdf">Sujet (PDF)</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle. Vous créez la liste de tâches de l’équipe, sur une page indépendante.</p><h4>Objectifs</h4><ul><li>Sélectionner et modifier des nœuds du DOM.</li><li>Gérer des événements utilisateur et une validation côté client.</li><li>Ajouter et supprimer des tâches sans recharger la page.</li></ul><h4>Notions</h4><p>DOM, document.querySelector, createElement, append, remove, classList, preventDefault, trim.</p><h4>À préparer</h4><p>Fonctions, événements et classes CSS vus au TP6. Vous pouvez réutiliser <code>styles.css</code> du TP4.</p><h4>Travail demandé</h4><ol><li>Créer une page avec un formulaire de tâche (champ et bouton) et une liste vide.</li><li>Écouter <code>submit</code>, empêcher le rechargement et vérifier que le champ n’est pas vide, avec <code>trim()</code>.</li><li>Créer un élément <code>li</code> avec un bouton « Supprimer », puis l’ajouter à la liste.</li><li>Ajouter un compteur de tâches, à jour après chaque ajout et suppression.</li><li>Afficher une erreur accessible (<code>role=&quot;alert&quot;</code>) si le champ est vide.</li><li>Tout tester au clavier. Après une suppression, le focus doit revenir sur le champ.</li></ol><h4>Contraintes</h4><p>La validation côté navigateur ne remplace jamais une validation côté serveur en production.</p><h4>Critères d’évaluation</h4><p>Ajout et suppression de tâches, compteur exact, saisies vides refusées, erreur annoncée, focus maîtrisé.</p><h4>À rendre</h4><p>Le dossier compressé : la page HTML, <code>styles.css</code> et <code>script.js</code>.</p><h4>Pour aller plus loin</h4><p>Ajouter un bouton « Tout supprimer » et documenter son comportement en deux phrases.</p>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="module" id="atelier-ia">
+      <h2>Atelier IA</h2>
+      <p class="resume">Une séance d’essai après le TP 7 : utiliser une IA pour créer une page, puis vérifier ce qu’elle produit.</p>
+      <div class="grille">
+      <article class="carte">
+        <p class="surtitre">Atelier · 1h30<span class="badge">Essai, non noté</span></p>
+        <h3>Générer, puis vérifier</h3>
+        <div class="liens">
+          <a class="bouton" href="tp/Atelier_IA_Sujet.pdf">Sujet (PDF)</a>
+          <a class="bouton secondaire" href="tp/Atelier_IA_Fichiers_depart.zip">Fichiers de départ (ZIP)</a>
+        </div>
+        <details>
+          <summary>Objectifs et notions</summary>
+          <h4>Situation</h4><p>L’équipe d’Ocean Fest a reçu une page générée par une IA et veut y ajouter la réservation des ateliers. Vous vérifiez, corrigez et complétez ce travail.</p><h4>Objectifs</h4><ul><li>Repérer les défauts d’une page générée par une IA, même si elle semble correcte.</li><li>Rédiger une demande précise et tester la réponse obtenue.</li><li>Expliquer et assumer le code que l’on rend.</li></ul><h4>Notions</h4><p>Prompt, audit, tests, accessibilité, vérification des faits, responsabilité de l’auteur.</p><h4>À préparer</h4><p>Les TP1 à TP7 ; l’archive <code>Atelier_IA_Fichiers_depart.zip</code>. Outil conseillé, sans compte : Duck.ai. Sans accès ou sans souhait d’utiliser une IA, le dossier <code>secours/</code> contient des réponses enregistrées.</p><h4>Travail demandé</h4><ol><li><strong>30 min, audit.</strong> Ouvrir <code>audit/index.html</code> et lire <code>audit/BRIEF.md</code>. Avec <code>audit/GRILLE_AUDIT.md</code>, trouver au moins 8 défauts, puis en corriger au moins 5.</li><li><strong>45 min, génération.</strong> Lire <code>reservation/CONSIGNE.md</code>. Demander la page à l’IA, d’abord avec une demande vague, puis avec une demande précise. Passer les tests T1 à T6, corriger, et remplir <code>JOURNAL_IA.md</code> au fil de l’eau.</li><li><strong>15 min, explication.</strong> À deux, chacun choisit 5 lignes dans le code de l’autre. L’auteur ou l’autrice explique ce qu’elles font et comment il ou elle les a vérifiées.</li></ol><h4>Règles de l’atelier</h4><ul><li>L’IA est autorisée dans cette séance uniquement. Elle reste interdite aux évaluations.</li><li>Aucune donnée personnelle, aucun identifiant et aucun mot de passe dans une demande.</li><li>Une réponse de l’IA peut être fausse, même si elle paraît sûre d’elle : vous restez responsable de ce que vous rendez.</li></ul><h4>Contraintes</h4><p>Rendre uniquement du code que vous savez expliquer. Noter dans le journal tout ce qui vient de l’IA.</p><h4>Critères d’évaluation</h4><p>Défauts trouvés et corrigés, tests T1 à T6 réussis, journal honnête et précis, explication claire de vos lignes de code.</p><h4>À rendre</h4><p>Un ZIP avec <code>audit/</code> corrigé, <code>reservation/</code> et <code>JOURNAL_IA.md</code> complété.</p>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="module" id="wordpress">
+      <h2>WordPress</h2>
+      <p class="resume">Publier du contenu et administrer un site, puis tout évaluer.</p>
+      <div class="grille large">
+      <article class="carte" id="tp08">
+        <p class="surtitre">TP 8 · 1h30 · Ocean Fest</p>
+        <h3>Découvrir WordPress et publier du contenu</h3>
+        <p class="objectif">Expliquer le rôle de PHP, du serveur et de la base de données dans WordPress.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP08_Sujet.pdf">Sujet (PDF)</a>
+          <a class="bouton secondaire" href="tp/Fiche_realisation_WordPress.pdf">Fiche de réalisation</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Expliquer le rôle de PHP, du serveur et de la base de données dans WordPress.</li><li>Créer pages, articles, catégories et menu via le tableau de bord.</li><li>Différencier thème, extension, contenu et administration.</li></ul><h4>Notions</h4><p>CMS, WordPress, hébergement, PHP, MySQL/MariaDB, page, article, catégorie, thème, extension, URL permaliens.</p><h4>À préparer</h4><p>Votre instance WordPress individuelle, déjà installée. Les identifiants et l’URL sont fournis par l’enseignant.</p><h4>Travail demandé</h4><ol><li>Vous connecter à votre instance et donner au site le titre « Ocean Fest » (Réglages &gt; Général).</li><li>Créer et publier les pages Accueil, Programme, Contact et Actualités.</li><li>Créer deux catégories et publier deux articles, chacun dans une catégorie.</li><li>Définir Accueil comme page d’accueil statique et Actualités comme page des articles (Réglages &gt; Lecture). Vérifier le format des permaliens.</li><li>Configurer la navigation vers les quatre pages et vérifier le site en navigation privée.</li><li>Dans la fiche, expliquer le rôle de PHP et de la base de données, et la différence entre thème, extension, contenu et administration.</li></ol><h4>Contraintes</h4><p>Ne pas installer de serveur. Conservez cette instance : elle sert aussi au TP9.</p><h4>Critères d’évaluation</h4><p>Pages et articles publiés, page d’accueil configurée, menu fonctionnel, catégories présentes, réponses justes.</p><h4>À rendre</h4><p>La fiche <code>Fiche_realisation_WordPress</code> complétée et des captures, sans identifiant ni mot de passe visible.</p><h4>Pour aller plus loin</h4><p>Ajouter une image à un article avec un texte alternatif pertinent, et vérifier le site sur petit écran.</p>
+        </details>
+      </article>
+      <article class="carte" id="tp09">
+        <p class="surtitre">TP 9 · 1h30 · Ocean Fest</p>
+        <h3>Personnaliser et administrer WordPress</h3>
+        <p class="objectif">Configurer navigation, thème, blocs, formulaire et rôles.</p>
+        <div class="liens">
+          <a class="bouton" href="tp/TP09_Sujet.pdf">Sujet (PDF)</a>
+          <a class="bouton secondaire" href="tp/Fiche_realisation_WordPress.pdf">Fiche de réalisation</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Vous participez à la conception du site fictif « Ocean Fest », festival culturel à La Rochelle.</p><h4>Objectifs</h4><ul><li>Configurer navigation, thème, blocs, formulaire et rôles.</li><li>Appliquer de bonnes pratiques de sécurité, sauvegarde et SEO.</li><li>Documenter les paramétrages du site.</li></ul><h4>Notions</h4><p>Thèmes blocs, modèles, menus, extensions, rôles, maintenance, sauvegarde, formulaire, SEO.</p><h4>À préparer</h4><p>Votre instance individuelle, dans son état final du TP8.</p><h4>Travail demandé</h4><ol><li>Choisir un thème de blocs et appliquer une palette cohérente et lisible.</li><li>Personnaliser l’en-tête et le pied de page avec l’éditeur de site.</li><li>Créer un formulaire avec une extension autorisée et le tester avec des données fictives. Sinon, créer un formulaire de démonstration clairement indiqué comme non connecté.</li><li>Vérifier les titres, les textes alternatifs, les permaliens et la version mobile.</li><li>Si autorisé, créer un compte Éditeur fictif et justifier ce rôle dans la fiche.</li><li>Rédiger une fiche de maintenance : mises à jour, sauvegarde, comptes, extensions.</li></ol><h4>Contraintes</h4><p>Installer une extension seulement si l’enseignant l’autorise. Jamais de vrai mot de passe dans les captures, jamais de donnée personnelle réelle dans le formulaire.</p><h4>Critères d’évaluation</h4><p>Identité graphique, navigation, formulaire ou alternative documentée, maintenance et accessibilité.</p><h4>À rendre</h4><p>La fiche <code>Fiche_realisation_WordPress</code>, la fiche de maintenance et des captures, sans identifiant ni mot de passe visible.</p><h4>Pour aller plus loin</h4><p>Comparer deux rôles WordPress en deux phrases et vérifier la navigation au clavier.</p>
+        </details>
+      </article>
+      <article class="carte evaluation" id="tp10">
+        <p class="surtitre">TP 10 · 1h30 · Ocean Fest<span class="badge">Évaluation</span></p>
+        <h3>JavaScript et WordPress</h3>
+        <p class="objectif">Réaliser une tâche autonome en JavaScript et DOM.</p>
+        <div class="liens">
+          <span class="attente">Sujet remis le jour de l’épreuve</span>
+          <a class="bouton secondaire" href="tp/Fiche_realisation_WordPress.pdf">Fiche de réalisation</a>
+        </div>
+        <details>
+          <summary>Voir le détail de la séance</summary>
+          <h4>Situation</h4><p>Épreuve individuelle : vous terminez la page de programme du festival Ocean Fest et complétez son site WordPress.</p><h4>Objectifs</h4><ul><li>Réaliser une tâche autonome en JavaScript et DOM.</li><li>Administrer un site WordPress existant en respectant un cahier des charges.</li><li>Livrer des preuves reproductibles de fonctionnement.</li></ul><h4>Notions</h4><p>DOM et événements, WordPress (pages, catégories, menu), tests et livrables.</p><h4>À préparer</h4><p>L’archive <code>TP10_Fichiers_depart.zip</code> et une instance WordPress d’évaluation, avec ses identifiants, fournies par l’enseignant.</p><h4>Déroulé de l’épreuve</h4><ol><li>Partie A, 60 min : dans le mini-site de départ, ajouter le filtre des activités et le compteur.</li><li>Partie B, 25 min : compléter l’instance WordPress (page, catégorie, article, menu).</li><li>5 min : déposer les fichiers et le document de preuves.</li></ol><h4>Cahier des charges</h4><ul><li><strong>Partie A.</strong> La page présente 6 activités portant un attribut <code>data-type</code> (<code>concert</code>, <code>atelier</code>, <code>rencontre</code>). Ne pas modifier ces valeurs.</li><li>Créer un <code>select</code> avec son <code>label</code>, proposant Toutes, Concert, Atelier et Rencontre : le choix n’affiche que les activités correspondantes. L’option Toutes réaffiche les 6 activités.</li><li>Créer un compteur du nombre d’activités visibles, exact dès le chargement de la page.</li><li><strong>Partie B.</strong> Créer et publier la page « Informations pratiques » (titre et texte).</li><li>Créer la catégorie « Actualités » et l’affecter à l’article « Bilan de la dernière édition », déjà présent.</li><li>Ajouter la page au menu et vérifier le résultat en navigation privée.</li></ul><h4>Contraintes</h4><p>Épreuve individuelle. Ressources autorisées : documentation technique et notes personnelles. Corrigés des TP, collaboration et IA générative interdits. À adapter au règlement de l’établissement. Les opérations se font uniquement sur votre instance d’évaluation.</p><h4>Critères d’évaluation</h4><p>Barème sur 100 : JavaScript et DOM 60 (filtre 30, compteur 20, qualité 10) ; WordPress 30 ; livrables et tests 10.</p><h4>À rendre</h4><p>Un ZIP avec <code>index.html</code>, <code>script.js</code> et la fiche <code>Fiche_realisation_WordPress</code>, incluant une capture du menu et une de la catégorie, sans identifiant visible.</p>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section id="evaluations">
+      <h2>Évaluations</h2>
+      <div class="deux">
+        <div class="encadre">
+          <h3>Évaluation 1 : HTML et CSS</h3>
+          <p><strong>TP 5 · 40 % de la note.</strong> Créer une page responsive à partir d’un cahier des charges, sur un nouveau sujet.</p>
+        </div>
+        <div class="encadre">
+          <h3>Évaluation 2 : JavaScript et WordPress</h3>
+          <p><strong>TP 10 · 60 % de la note.</strong> 60 min de JavaScript, 25 min de WordPress et 5 min de remise.</p>
+        </div>
+      </div>
+      <p>Épreuve individuelle. Ressources autorisées : documentation technique et notes personnelles. Corrigés des TP, collaboration et IA générative interdits.</p>
+    </section>
+
+    <section id="diffusion">
+      <h2>Ressources et diffusion</h2>
+      <div class="deux">
+        <div>
+          <h3>Pour chaque TP</h3>
+          <ul>
+            <li>Un <strong>sujet PDF</strong> remis aux étudiants, avec objectifs, travail pas à pas, critères et consignes de rendu.</li>
+            <li>Un <strong>ZIP de correction</strong> réservé à l’enseignant, diffusé après la remise (guide, barème, grille de validation selon le TP).</li>
+            <li>Pour les TP 8 à 10 : une <strong>fiche de réalisation WordPress</strong> à compléter, avec captures.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Côté enseignant</h3>
+          <ul>
+            <li>Un <strong>déroulé des 10 TP</strong> et un <strong>guide de préparation des instances WordPress</strong> (instance de TP, instance d’évaluation, contrôles avant séance).</li>
+            <li>Les corrections des TP 5 et 10 ne sont diffusées qu’après toutes les sessions d’épreuve.</li>
+            <li>Les fichiers de départ du TP 10 sont remis le jour de l’épreuve.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="pratique">
+      <h2>Infos pratiques</h2>
+      <div class="deux">
+        <div>
+          <h3>Matériel</h3>
+          <ul>
+            <li>Un navigateur récent et un éditeur de code (VS Code conseillé).</li>
+            <li>Pour les TP 8 à 10 : une instance WordPress individuelle et ses identifiants, fournis pour le cours.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Rendus</h3>
+          <ul>
+            <li>Une archive nommée <code>TP05_NOM_Prenom.zip</code>, avec le numéro du TP.</li>
+            <li>Pour WordPress, la <a href="tp/Fiche_realisation_WordPress.pdf">fiche de réalisation</a> (<a href="tp/Fiche_realisation_WordPress.md">version modifiable</a>).</li>
+            <li>Jamais d’identifiant ni de mot de passe dans les captures.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="enveloppe">
+      <p>Assist. Prof. Emanuela Boros · <a href="mailto:emanuela.boros@univ-lr.fr">emanuela.boros@univ-lr.fr</a></p>
+      <p><a href="https://emanuelaboros.github.io/courses/">Tous les cours</a> · La Rochelle Université</p>
+    </div>
+  </footer>
+</body>
+</html>

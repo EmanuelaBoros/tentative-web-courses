@@ -1,0 +1,347 @@
+Voici une page de réservation responsive, prête à enregistrer dans un fichier `index.html`. Le formulaire est visuel : pour recevoir réellement les réservations, il faudra le relier à un service ou à un serveur.
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réserver — Festival Horizon</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8f5ed;
+      --muted: #b9b3a8;
+      --bg: #151519;
+      --panel: #222126;
+      --accent: #d6ff56;
+      --pink: #ff7c9c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.5 system-ui, sans-serif;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #ffffff1a;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .topbar a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    main {
+      width: min(1120px, 88%);
+      margin: 58px auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin: 12px 0;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: .92;
+      letter-spacing: -.07em;
+    }
+
+    h1 span { color: var(--pink); }
+
+    .intro {
+      max-width: 520px;
+      color: var(--muted);
+    }
+
+    .event-card {
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 26px;
+      border-radius: 22px;
+      background:
+        radial-gradient(ellipse at 75% 15%, #ff7c9c 0 8%, transparent 9%),
+        radial-gradient(ellipse at 25% 35%, #d6ff56 0 12%, transparent 13%),
+        linear-gradient(145deg, #7352b5, #272034 65%);
+      box-shadow: 0 20px 60px #0005;
+    }
+
+    .event-card strong { font-size: 1.7rem; }
+    .event-card p { margin: 4px 0 0; color: #eee; }
+
+    .booking {
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    form, .summary {
+      padding: 28px;
+      border: 1px solid #ffffff14;
+      border-radius: 20px;
+      background: var(--panel);
+    }
+
+    h2 { margin: 0 0 22px; font-size: 1.4rem; }
+
+    .ticket-option {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 16px;
+      border: 1px solid #ffffff24;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+
+    .ticket-option:has(input:checked) {
+      border-color: var(--accent);
+      background: #d6ff5610;
+    }
+
+    .ticket-option input { accent-color: var(--accent); }
+    .ticket-option small { display: block; color: var(--muted); }
+    .price { white-space: nowrap; font-weight: 800; }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    label.field {
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #ffffff24;
+      border-radius: 10px;
+      outline: none;
+      background: #17161a;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    input:focus { border-color: var(--accent); }
+
+    .summary {
+      position: sticky;
+      top: 20px;
+    }
+
+    .summary p {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+    }
+
+    .summary .total {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #ffffff24;
+      color: var(--ink);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 15px;
+      border: 0;
+      border-radius: 11px;
+      background: var(--accent);
+      color: #171915;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    button:hover { filter: brightness(.93); }
+
+    .note {
+      color: var(--muted);
+      font-size: .8rem;
+      text-align: center;
+    }
+
+    footer {
+      padding: 24px 7%;
+      color: var(--muted);
+      text-align: center;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 760px) {
+      main { margin: 36px auto; }
+      .hero, .booking { grid-template-columns: 1fr; }
+      .hero { gap: 22px; }
+      .event-card { min-height: 190px; }
+      .summary { position: static; }
+    }
+
+    @media (max-width: 480px) {
+      .topbar { padding: 18px 6%; }
+      .fields { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      form, .summary { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" aria-label="Festival Horizon, accueil">HORIZON<span>✳</span></a>
+    <a href="#reservation">Réserver ma place ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">12 — 14 juillet · Parc des Lumières</div>
+        <h1>Trois jours<br>hors du <span>temps.</span></h1>
+        <p class="intro">
+          Musique, découvertes et nuits d’été. Rejoins-nous pour une nouvelle
+          édition du Festival Horizon.
+        </p>
+      </div>
+      <div class="event-card" aria-label="Affiche colorée du Festival Horizon">
+        <strong>HORIZON 2026</strong>
+        <p>Le rendez-vous de l’été · Ouverture des portes à 16 h</p>
+      </div>
+    </section>
+
+    <section class="booking" id="reservation">
+      <form id="booking-form">
+        <h2>Choisis ton billet</h2>
+
+        <label class="ticket-option">
+          <span>
+            <input type="radio" name="ticket" value="45" checked>
+            Pass 1 jour
+            <small>Accès au festival pour une journée</small>
+          </span>
+          <span class="price">45 €</span>
+        </label>
+
+        <label class="ticket-option">
+          <span>
+            <input type="radio" name="ticket" value="99">
+            Pass 3 jours
+            <small>Le festival en entier, du vendredi au dimanche</small>
+          </span>
+          <span class="price">99 €</span>
+        </label>
+
+        <div class="fields">
+          <label class="field">
+            Prénom
+            <input type="text" name="prenom" autocomplete="given-name" required>
+          </label>
+          <label class="field">
+            Nom
+            <input type="text" name="nom" autocomplete="family-name" required>
+          </label>
+          <label class="field full">
+            Adresse e-mail
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            Nombre de billets
+            <input id="quantity" type="number" name="quantity" min="1" max="8" value="1" required>
+          </label>
+        </div>
+      </form>
+
+      <aside class="summary">
+        <h2>Ta réservation</h2>
+        <p><span>Billet</span><span id="ticket-name">Pass 1 jour</span></p>
+        <p><span>Quantité</span><span id="quantity-label">1</span></p>
+        <p class="total"><span>Total</span><span id="total">45 €</span></p>
+        <button type="submit" form="booking-form">Continuer la réservation</button>
+        <p class="note">Paiement sécurisé · Confirmation par e-mail</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>© 2026 Festival Horizon · Une création pour les nuits d’été</footer>
+
+  <script>
+    const form = document.querySelector("#booking-form");
+    const quantity = document.querySelector("#quantity");
+    const total = document.querySelector("#total");
+    const quantityLabel = document.querySelector("#quantity-label");
+    const ticketName = document.querySelector("#ticket-name");
+
+    function updateSummary() {
+      const selected = document.querySelector('input[name="ticket"]:checked');
+      const count = Math.max(1, Number(quantity.value) || 1);
+      const price = Number(selected.value);
+
+      quantityLabel.textContent = count;
+      total.textContent = `${price * count} €`;
+      ticketName.textContent = price === 99 ? "Pass 3 jours" : "Pass 1 jour";
+    }
+
+    document.querySelectorAll('input[name="ticket"]').forEach((input) => {
+      input.addEventListener("change", updateSummary);
+    });
+    quantity.addEventListener("input", updateSummary);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      alert("Merci ! Le formulaire est prêt à être relié à un système de réservation.");
+    });
+
+    updateSummary();
+  </script>
+</body>
+</html>
+```

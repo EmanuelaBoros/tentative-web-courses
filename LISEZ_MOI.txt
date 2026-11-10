@@ -1,0 +1,12 @@
+KIT PÉDAGOGIQUE - 10 TP WEB - La Rochelle Université
+
+DOCUMENT ENSEIGNANT : commencer par 00_Deroule_10_TP.pdf, puis 00_Guide_enseignant_WordPress.pdf.
+
+Chaque dossier TP contient un sujet PDF et une archive ZIP de correction.
+Les corrections restent réservées aux enseignants jusqu'à la remise, en particulier pour TP05 et TP10.
+TP10 contient aussi TP10_Fichiers_depart.zip, à distribuer le jour de l'évaluation.
+Fiche_realisation_WordPress.pdf et .md sont à distribuer pour TP08, TP09 et TP10.
+WordPress : prévoir une instance par personne. Aucun serveur ni compte n'est inclus.
+Atelier_IA/ contient une séance d'essai facultative, non notée (guide dans le ZIP de correction).
+site/ contient le site public du cours, sans correction ni sujet d'évaluation par défaut.
+_source/ contient de quoi régénérer les PDF, les ZIP et le site (voir _source/README.md).
