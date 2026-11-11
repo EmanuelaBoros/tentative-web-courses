@@ -236,7 +236,7 @@ def modules():
     return "\n\n".join(sorties)
 
 
-BANDEAU = """  <p class="bandeau" role="note">Version de travail, en cours de rédaction : proposition de TP soumise à relecture. Les corrections ne figurent pas sur ce site.</p>"""
+BANDEAU = ""
 
 PAGE = """<!doctype html>
 <html lang="fr">
